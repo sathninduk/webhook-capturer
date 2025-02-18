@@ -7,7 +7,7 @@ import { Webhook } from './schemas/webhook.schema';
 
 @Injectable()
 export class AppService {
-  private readonly MERCHANT_SECRET = 'a4f9feba-19dd-47b7-8d09-268a25c44a35';
+  private readonly MERCHANT_SECRET = 'SAMPLE_SECRET';
 
   constructor(@InjectModel(Webhook.name) private webhookModel: Model<Webhook>) {}
 
