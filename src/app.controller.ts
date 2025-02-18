@@ -14,7 +14,7 @@ export class AppController {
 
   @Post('webhook')
   @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }))
-  async getWebhook(@Body() webhookDto: WebhookDto): Promise<void> {
-    await this.appService.webhook(webhookDto);
+  async getWebhook(@Body() webhookDto: WebhookDto): Promise<any> {
+    return await this.appService.webhook(webhookDto);
   }
 }

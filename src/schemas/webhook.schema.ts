@@ -21,8 +21,9 @@ export class Webhook extends Document {
   @Prop({ required: true })
   txHash: string;
 
-  @Prop({ required: true })
+  @Prop()
   comments: string;
+
 }
 
 export const WebhookSchema = SchemaFactory.createForClass(Webhook);

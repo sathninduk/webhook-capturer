@@ -1,5 +1,6 @@
 // src/webhook.dto.ts
 import { IsString, IsNotEmpty } from 'class-validator';
+import { Optional } from '@nestjs/common';
 
 export class WebhookDto {
   @IsString()
@@ -26,7 +27,9 @@ export class WebhookDto {
   @IsNotEmpty()
   txHash: string;
 
+  // nullable
   @IsString()
-  @IsNotEmpty()
+  @Optional()
   comments: string;
+
 }
